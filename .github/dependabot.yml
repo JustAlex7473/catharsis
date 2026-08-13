@@ -3,7 +3,7 @@ updates:
     - package-ecosystem: "gradle"
       directories:
         - "/"
-        - "/gradle"
+        - "/gradle/*.versions.toml"
       schedule:
           interval: "daily"
       groups:

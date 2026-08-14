@@ -1,12 +1,15 @@
 version: 2
+registries:
+    teamresourceful:
+        type: maven-repository
+        url: https://maven.teamresourceful.com/repository/maven-public/
 updates:
-    - package-ecosystem: "gradle"
-      directories:
-        - "/"
-        - "/gradle/*.versions.toml"
-      schedule:
-          interval: "daily"
-      groups:
-          gradle-updates:
-              patterns:
-                  - "*"
+    -   package-ecosystem: "gradle"
+        directory: "/"
+        registries: "*"
+        schedule:
+            interval: "daily"
+        groups:
+            gradle-updates:
+                patterns:
+                    - "*"

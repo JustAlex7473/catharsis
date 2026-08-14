@@ -6,6 +6,7 @@ registries:
 updates:
     -   package-ecosystem: gradle
         directory: /
+        registries: "*"
         schedule:
             interval: daily
         allow:

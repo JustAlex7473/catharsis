@@ -4,12 +4,9 @@ registries:
         type: maven-repository
         url: https://maven.teamresourceful.com/repository/maven-public/
 updates:
-    -   package-ecosystem: "gradle"
-        directory: "/"
-        registries: "*"
+    -   package-ecosystem: gradle
+        directory: /
         schedule:
-            interval: "daily"
-        groups:
-            gradle-updates:
-                patterns:
-                    - "*"
+            interval: daily
+        allow:
+            -   dependency-name: "tech.thatgravyboat:skyblock-api"
